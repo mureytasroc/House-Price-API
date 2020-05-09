@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>House Price API</title>
+</head>
+<body>
+<center>
+    <h1>House Price API</h1>
+    <u>Test API</u>
+    <p>Welcome, {{ request.user.profile.name }}</p>
+
+    <form action="/" method="get">{% csrf_token %}<input
+            style="cursor:pointer;"
+            type="submit" value="Home"></form>
+
+<br><br>
+
+    {%  if returned_data %}
+        <div style="width: 300px;
+                    border: 5px solid green;
+                    margin: 20px;
+                    padding-bottom: 20px;">
+        <p style="color: green;">Response:</p> <p>Predicted Price: {{ returned_data.price }}</p>
+        </div>
+        <br><br>
+    {% endif %}
+
+    <form action="/testapi/" method="post">{% csrf_token %}
+        API Key: <input type="text" name="api_key" value="{{ request.user.profile.api_key }}">
+        <br><br>
+        {% for c in cont_features %}
+        {{ c.0 }}: <input type="text" name="{{ c.1 }}"><br><br>
+        {% endfor %}
+        {% for c in cat_features %}
+            {{ c.0 }}: <select name="{{ c.1 }}">
+                {% for o in c.2 %}
+                <option value="{{ o.0 }}">{{ o.1 }}</option>
+                {% endfor %}
+            </select><br><br>
+        {% endfor %}
+        <br>
+        <input style="cursor:pointer;" type="submit"></form>
+<br><br>
+<u>Feature Descriptions Table</u><br><br>
+<table border="1">
+<tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+{% for f in features_desc %}
+  <tr>
+    <td>{{ f.0 }}</td>
+    <td>{{ f.1 }}</td>
+  </tr>
+{% endfor %}
+</table><br>
+<p>Note that county, zip code, and city were scrambled codes that could not be identified with
+real data (Zillow possibly did this for legal reasons).  So just pick random categories for those.
+    This is unfortunate, but there's nothing
+I could really do about it and this dataset was the best I could find due to the steel grip
+that the National Association of Realtors keeps on MLS data.  In a realistic situation, I could
+register as a realtor and get access to real county/city/zip-code data and this project would
+be done the exact same way (just with that data instead).</p><br><br>
+</center>
+</body>
+</html>
+

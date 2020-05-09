@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>House Price API</title>
+</head>
+<body>
+<center>
+    <h1>House Price API</h1>
+    <u>Developer Console</u>
+    <p>Welcome, {{ request.user.profile.name }}</p>
+    <p>API Key: {{ request.user.profile.api_key }}</p>
+    <form action="/logout/" method="post">{% csrf_token %}<input
+            style="cursor:pointer;"
+            type="submit" value="Logout"></form>
+    <br>
+
+    <form action="/testapi/" method="get">{% csrf_token %}<input
+            style="cursor:pointer;"
+            type="submit" value="Test API"></form>
+
+    <br><br><br>
+    <form action="/deleteuser/" method="post">{% csrf_token %}<input
+            style="background-color: red; cursor:pointer;"
+            type="submit" value="Delete Account"></form>
+</center>
+</body>
+</html>
+
