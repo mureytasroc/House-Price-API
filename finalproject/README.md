@@ -2,6 +2,8 @@
 
 See bottom of document for submission requirement justifications.
 
+My video can be found at: https://drive.google.com/open?id=1pIgdtfND2Av9fQWVMnzPqIfzihYobZdr
+
 ## Installation Instructions
 
 To install and run the API server, do the following.  Run `pipenv shell` and then `pipenv install`
@@ -123,6 +125,6 @@ learning model).
 my Jupyter notebook; I have highly verbose inline comments in my notebook explaining my
 steps of analysis and model development.
 5. You are reading the README
-6. The video is located in the root directory (`video.mp4`).
+6. The video can be found at this link: https://drive.google.com/open?id=1pIgdtfND2Av9fQWVMnzPqIfzihYobZdr
 
 
