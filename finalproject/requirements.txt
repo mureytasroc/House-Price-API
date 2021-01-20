@@ -1,7 +1,8 @@
+-i https://pypi.org/simple/
 asgiref==3.2.7
 catboost==0.23
 cycler==0.10.0
-Django==3.0.6
+django==3.0.7
 graphviz==0.14
 kiwisolver==1.2.0
 matplotlib==3.2.1
