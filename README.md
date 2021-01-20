@@ -1,8 +1,4 @@
-# House Price API (CIS 192 Final Project)
-
-See bottom of document for submission requirement justifications.
-
-My video can be found at: https://drive.google.com/open?id=1pIgdtfND2Av9fQWVMnzPqIfzihYobZdr
+# House Valuation API
 
 ## Installation Instructions
 
@@ -13,15 +9,14 @@ You can then visit `localhost:8000` in your browser
 (Chrome preferred) to see the website.  The website usage instructions are baked into the
 highly user-centric design (the website is intuitive to use).  Unfortunately,
 since it is assumed developers are going to be the ones using this tool, the website is not
-styled (this is also because it would waste time one a final project which is meant
-to be focused on Python programming).
+styled (this is also because frontend/design was not a focus of this project).
 
 
 ## Project Overview
 
 In this project, I developed a machine learning model for
 predicting house prices given various features about the house (check out my Jupyter notebook,
-`CIS192_Final_Project.ipynb`, for my data cleaning, analysis, and modeling work).
+`analysis.ipynb`, for my data cleaning, analysis, and modeling work -- also available in [collab](https://colab.research.google.com/drive/1RUtQx8iOYDjHzPq2XJUEEY7Fu30OQkwO?usp=sharing)).
 
 Then, I developed a DRF API for predicting a house price with various features of the house
 (described on the website on the Test API page).  Through the websites,
@@ -114,15 +109,3 @@ Heating Type:
 | Steam           | 19             |
 ---
 
-
-## Submission requirements:
-1. My class definition is the `Profile` class in `housevaluationapi/models.py`.  I override the magic
-methods `__str__`, `__lt__`, `__gt__`, `__le__`, and `__ge__`.
-2. My two non-trivial first-party packages are `random` and `string` (used in `housevaluationapi/views.py`).
-3. My two non-trivial third-party packages are `django` (used for the entire web API) and `catboost` (used in `housevaluationapi/views.py` for the machine
-learning model).
-4. Most of my DRF code is self-explanatory, so I chose to fulfill this requirement in
-my Jupyter notebook; I have highly verbose inline comments in my notebook explaining my
-steps of analysis and model development.
-5. You are reading the README
-6. The video can be found at this link: https://drive.google.com/open?id=1pIgdtfND2Av9fQWVMnzPqIfzihYobZdr
