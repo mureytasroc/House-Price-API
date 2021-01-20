@@ -16,14 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from housepriceapi import views as api_views
+from django.views.decorators.csrf import csrf_exempt
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', api_views.home),
-    path('login/', api_views.login_view),
-    path('logout/', api_views.logout_view),
-    path('deleteuser/', api_views.delete_view),
-    path('signup/', api_views.signup_view),
-    path('testapi/', api_views.test_api_view),
-    path('api/', api_views.get_home_price),
+    path("admin/", admin.site.urls),
+    path("", api_views.home),
+    path("demo/", csrf_exempt(api_views.demo_view)),
+    path("login/", api_views.login_view),
+    path("logout/", api_views.logout_view),
+    path("deleteuser/", api_views.delete_view),
+    path("signup/", api_views.signup_view),
+    path("testapi/", api_views.test_api_view),
+    path("api/", api_views.get_home_price),
 ]

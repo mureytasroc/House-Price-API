@@ -13,8 +13,17 @@ class Profile(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return "User[username: " + self.user.username + ", name: " + self.name \
-               + ", email: " + self.email + ", api_key: " + self.api_key + "]"
+        return (
+            "User[username: "
+            + self.user.username
+            + ", name: "
+            + self.name
+            + ", email: "
+            + self.email
+            + ", api_key: "
+            + self.api_key
+            + "]"
+        )
 
     def __lt__(self, other):
         return self.updated_at < other.updated_at
