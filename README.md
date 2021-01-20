@@ -16,7 +16,7 @@ styled (this is also because frontend/design was not a focus of this project).
 
 In this project, I developed a machine learning model for
 predicting house prices given various features about the house (check out my Jupyter notebook,
-`analysis.ipynb`, for my data cleaning, analysis, and modeling work -- also available in [collab](https://colab.research.google.com/drive/1RUtQx8iOYDjHzPq2XJUEEY7Fu30OQkwO?usp=sharing)).
+`analysis.ipynb`, for my data cleaning, analysis, and modeling work -- also available in [collab](https://colab.research.google.com/drive/1VkDsuf7LOxqaS4V5Q9NKlbidnJnyvDT2?usp=sharing)).
 
 Then, I developed a DRF API for predicting a house price with various features of the house
 (described on the website on the Test API page).  Through the websites,
