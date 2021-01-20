@@ -1,0 +1,34 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+psycopg2 = "*"
+django-environ = "*"
+gunicorn = "*"
+asgiref = "*"
+catboost = "*"
+graphviz = "*"
+kiwisolver = "*"
+matplotlib = "*"
+numpy = "*"
+pandas = "*"
+plotly = "*"
+pyparsing = "*"
+python-dateutil = "*"
+pytz = "*"
+retrying = "*"
+scipy = "*"
+six = "*"
+sqlparse = "*"
+Cycler = "*"
+Django = "*"
+whitenoise = "*"
+python-decouple = "*"
+dj-database-url = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

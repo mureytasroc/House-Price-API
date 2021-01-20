@@ -7,7 +7,7 @@ My video can be found at: https://drive.google.com/open?id=1pIgdtfND2Av9fQWVMnzP
 ## Installation Instructions
 
 To install and run the API server, do the following.  Run `pipenv shell` and then `pipenv install`
-from the `finalproject` directory.  Then run `python manage.py makemigrations` and 
+from the `finalproject` directory.  Then run `python manage.py makemigrations` and
 `python manage.py migrate` from that same root directory.  Finally, run `python manage.py runserver`.
 You can then visit `localhost:8000` in your browser
 (Chrome preferred) to see the website.  The website usage instructions are baked into the
@@ -20,7 +20,7 @@ to be focused on Python programming).
 ## Project Overview
 
 In this project, I developed a machine learning model for
-predicting house prices given various features about the house (check out my Jupyter notebook, 
+predicting house prices given various features about the house (check out my Jupyter notebook,
 `CIS192_Final_Project.ipynb`, for my data cleaning, analysis, and modeling work).
 
 Then, I developed a DRF API for predicting a house price with various features of the house
@@ -55,7 +55,7 @@ you can post a JSON object with the following integer fields to get a price pred
 
 Also, for the categorical features see the website (or datadesc.py)
 for the possible values.  There are a few features for which the names
-in the dropdown on the website is different from the 
+in the dropdown on the website is different from the
 integer value which should be passed into the API:
 
 Air Conditioning:
@@ -116,15 +116,13 @@ Heating Type:
 
 
 ## Submission requirements:
-1. My class definition is the `Profile` class in `housepriceapi/models.py`.  I override the magic
+1. My class definition is the `Profile` class in `housevaluationapi/models.py`.  I override the magic
 methods `__str__`, `__lt__`, `__gt__`, `__le__`, and `__ge__`.
-2. My two non-trivial first-party packages are `random` and `string` (used in `housepriceapi/views.py`).
-3. My two non-trivial third-party packages are `django` (used for the entire web API) and `catboost` (used in `housepriceapi/views.py` for the machine
+2. My two non-trivial first-party packages are `random` and `string` (used in `housevaluationapi/views.py`).
+3. My two non-trivial third-party packages are `django` (used for the entire web API) and `catboost` (used in `housevaluationapi/views.py` for the machine
 learning model).
 4. Most of my DRF code is self-explanatory, so I chose to fulfill this requirement in
 my Jupyter notebook; I have highly verbose inline comments in my notebook explaining my
 steps of analysis and model development.
 5. You are reading the README
 6. The video can be found at this link: https://drive.google.com/open?id=1pIgdtfND2Av9fQWVMnzPqIfzihYobZdr
-
-

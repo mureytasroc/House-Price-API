@@ -1,5 +1,5 @@
 from django.contrib import admin
-from housepriceapi.models import Profile
+from valuation.models import Profile
 
 
 class ProfileAdmin(admin.ModelAdmin):
@@ -7,4 +7,3 @@ class ProfileAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Profile, ProfileAdmin)
-
